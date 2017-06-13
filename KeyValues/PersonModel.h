@@ -12,7 +12,7 @@
 
 @property(nonatomic, strong) NSString *name;
 @property(nonatomic, strong) NSNumber *height;
-@property(nonatomic, strong) NSNumber *age;
+@property(nonatomic, strong) NSString *age;
 @property(nonatomic, strong) NSString *idCard;
 
 @end

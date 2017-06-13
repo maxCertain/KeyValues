@@ -10,6 +10,7 @@
 #import "NSObject+keyValues.h"
 #import "PersonModel.h"
 
+
 @interface ViewController ()
 
 @end
@@ -19,7 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSDictionary *infoDict = @{@"name":@"小明",@"age":@(18),@"height":@(170.5)};
+    NSDictionary *infoDict = @{@"name":@"小明",@"age":@(18),@"height":@(170)};
     
     PersonModel *model = [[PersonModel  alloc] init];
     [model setValuesForKeysWithDictionary:infoDict];
@@ -31,6 +32,11 @@
     NSLog(@"%@",model.age);
     NSLog(@"%@",model.height);
     NSLog(@"%@",model.idCard);
+    
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 80, 100, 30)];
+    [self.view addSubview:label];
+    
+    label.text = model.name;
     
     // Do any additional setup after loading the view, typically from a nib.
 }
